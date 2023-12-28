@@ -1,0 +1,40 @@
+
+import java.util.Random;
+
+import javax.swing.JOptionPane;
+
+public class juego {
+
+	  public static void main(String [] args) {
+		
+		  String[] opciones = {"piedra", "papel", "tijera"};
+			
+			String Jugadorpro = (String) JOptionPane.showInputDialog(null, "elegi  ", null, 0, null, opciones, opciones[0]);
+			  
+			Random random = new Random ();
+			
+			String computador = opciones[random.nextInt(opciones.length)];
+	
+	
+		if (computador == Jugadorpro) {
+			
+			JOptionPane.showMessageDialog(null, "EMPATAMOS ");
+		}
+		else if (Jugadorpro.equals("piedra") && computador.equals("tijera")) {
+			JOptionPane.showMessageDialog(null, "no gane ELEGI "+computador);
+        } else if (Jugadorpro.equals("papel") && computador.equals("piedra")) {
+        	JOptionPane.showMessageDialog(null, "NO GANE ELEGI "+computador);
+        } else if (Jugadorpro.equals("piedra") && computador.equals("papel")) {
+        	JOptionPane.showMessageDialog(null, "GANEEEEEE  ELEGI "+computador+" TOMALAAAAAAA");
+        } else if (Jugadorpro.equals("tijera") && computador.equals("papel")) {
+        	JOptionPane.showMessageDialog(null, "no gane  ELEGI "+computador);
+        } else if (Jugadorpro.equals("tijera") && computador.equals("piedra")) { 
+        	JOptionPane.showMessageDialog(null, "GANEEEEEE ELEGI "+computador+" TOMALAAAAAAAAAA");
+        }	else if (Jugadorpro.equals("papel") && computador.equals("tijera")) { 
+            	JOptionPane.showMessageDialog(null, "GANEEEEEE ELEGI "+computador+" TOMALAAAAAAAAAA");
+            	
+            	
+	  }
+	  
+	}
+}
