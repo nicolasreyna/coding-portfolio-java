@@ -1,0 +1,79 @@
+
+import javax.swing.JOptionPane;
+
+public class juego {
+
+	public static void main (String [] args) {
+		
+
+		int person = 10;
+		
+		String[] options = {"kill", "kiss", "insult"};
+		
+		int game = JOptionPane.showOptionDialog(null, "hello, you need to descend to the bottom floor.\n You find a grandma blocking your path to the stairs, what do you do?", "game", 0 , 3 , null, options, options[0]);
+		
+		switch (game) {
+		
+		case 0 : System.out.println("you are a psychopath!");
+		break;
+		case 1 : JOptionPane.showMessageDialog(null, "it seems that the old lady got scared due to you trying to kiss her, and ran away!");  Math.abs(person--); 
+		break;
+		case 2 : System.out.println("the sweet old lady knocked you out cold, and you lost conciousness.");
+		break;
+		}
+		
+		
+		
+		if (game == 1) {
+		
+			JOptionPane.showMessageDialog(null, "YOU advance to floor "+person);
+			
+		} else {
+			
+			JOptionPane.showMessageDialog(null, "you have lost. please retry again ");
+		    System.exit(0);
+		}
+		
+		
+		
+		int game1 = JOptionPane.showOptionDialog(null, "After making your way down to floor "+person+" \n You find yourself in a yellow stained carpet room, of which, a creature know as a shapeshifter is approaching with malicious intent, what do you do?", "game", 0 , 3 , null, options, options[0]);
+		
+switch (game1) {
+		
+		case 0 : System.out.println("you got mauled by the behemoth.");
+		break;
+		case 1 : System.out.println("What were you even trying to do?");
+		break;
+		case 2 : JOptionPane.showMessageDialog(null, "somehow you managed to hurt the monster's feelings that it ran away... you monster >:("); Math.abs(person--);
+		break;
+		
+		}
+
+
+
+if (game1 == 2)  {
+
+	JOptionPane.showMessageDialog(null, "YOU advance to floor "+person);
+	
+} else {
+	
+	JOptionPane.showMessageDialog(null, "you have lost. please retry again ");
+    System.exit(0);
+	
+}
+
+
+
+
+
+	}
+	
+	
+	
+	
+	
+	
+	{
+	
+	
+		
